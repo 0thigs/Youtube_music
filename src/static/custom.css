@@ -29,3 +29,27 @@ body {
 .button-search:hover {
     transform: scale(1.1);
 }
+
+.img-responsiva {
+    height: 500px !important;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 700px) {
+    #carouselExampleIndicators {
+        width: 100% !important;
+    }
+
+    .img-responsiva {
+        height: 200px !important;
+    }
+
+    .cards-container {
+        transform: scale(0.5);
+    }
+}

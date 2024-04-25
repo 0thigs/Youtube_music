@@ -9,13 +9,13 @@ Homepage - Youtube Helper
 {% block body %}
 
 <div style="padding: 0 20px;">
-
-    <div style="margin: 30px 10px;">
-        <h1 style="font-size: 60px;">Mixed for you</h1>
-    </div>
-
-    <main style="display: flex; justify-content: center; align-items: center;">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="height: 500px; width: 60%;">
+    
+    <main style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 100px;">
+        
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="width: 60%;">
+            <div style="margin: 30px 10px;">
+                <h1 style="font-size: 60px;">Mixed for you</h1>
+            </div>
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -23,13 +23,13 @@ Homepage - Youtube Helper
             </div>
             <div class="carousel-inner" style="height: 500px;">
               <div class="carousel-item active">
-                <img src="https://e1.pxfuel.com/desktop-wallpaper/191/698/desktop-wallpaper-matue-cria-uma-maquina-do-tempo.jpg" style="height: 500px !important;" class="d-block w-100 h-auto" alt="...">
+                <img src="https://e1.pxfuel.com/desktop-wallpaper/191/698/desktop-wallpaper-matue-cria-uma-maquina-do-tempo.jpg" class="d-block w-100 h-auto img-responsiva" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="https://i.ytimg.com/vi/d-GgZpCtBXw/maxresdefault.jpg" style="height: 500px !important;" class="d-block w-100" alt="...">
+                <img src="https://i.ytimg.com/vi/d-GgZpCtBXw/maxresdefault.jpg" class="d-block w-100 img-responsiva" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.2991656:1600801265/matue.jpeg?f=default&$p$f=5cd2e88" style="height: 500px !important;" class="d-block w-100" alt="...">
+                <img src="https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.2991656:1600801265/matue.jpeg?f=default&$p$f=5cd2e88" class="d-block w-100 img-responsiva" alt="...">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -41,7 +41,47 @@ Homepage - Youtube Helper
               <span class="visually-hidden">Next</span>
             </button>
           </div>
+
+
+          <div class="musics-container" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <div style="margin: 30px 10px;">
+                <h1 style="font-size: 60px;">Recommended albuns</h1>
+            </div>
+            <div class="cards-container">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ec33530a-3bc5-46d6-828b-929660622f4f/de7mdnr-820709d6-d871-4279-b7d2-6093708c29da.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VjMzM1MzBhLTNiYzUtNDZkNi04MjhiLTkyOTY2MDYyMmY0ZlwvZGU3bWRuci04MjA3MDlkNi1kODcxLTQyNzktYjdkMi02MDkzNzA4YzI5ZGEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.qCytZFDLouKCzlzSSxKMhFV_ZWXw67Zl8RjZcNtKxWA" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ec33530a-3bc5-46d6-828b-929660622f4f/de7mdnr-820709d6-d871-4279-b7d2-6093708c29da.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VjMzM1MzBhLTNiYzUtNDZkNi04MjhiLTkyOTY2MDYyMmY0ZlwvZGU3bWRuci04MjA3MDlkNi1kODcxLTQyNzktYjdkMi02MDkzNzA4YzI5ZGEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.qCytZFDLouKCzlzSSxKMhFV_ZWXw67Zl8RjZcNtKxWA" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ec33530a-3bc5-46d6-828b-929660622f4f/de7mdnr-820709d6-d871-4279-b7d2-6093708c29da.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VjMzM1MzBhLTNiYzUtNDZkNi04MjhiLTkyOTY2MDYyMmY0ZlwvZGU3bWRuci04MjA3MDlkNi1kODcxLTQyNzktYjdkMi02MDkzNzA4YzI5ZGEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.qCytZFDLouKCzlzSSxKMhFV_ZWXw67Zl8RjZcNtKxWA" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ec33530a-3bc5-46d6-828b-929660622f4f/de7mdnr-820709d6-d871-4279-b7d2-6093708c29da.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VjMzM1MzBhLTNiYzUtNDZkNi04MjhiLTkyOTY2MDYyMmY0ZlwvZGU3bWRuci04MjA3MDlkNi1kODcxLTQyNzktYjdkMi02MDkzNzA4YzI5ZGEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.qCytZFDLouKCzlzSSxKMhFV_ZWXw67Zl8RjZcNtKxWA" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ec33530a-3bc5-46d6-828b-929660622f4f/de7mdnr-820709d6-d871-4279-b7d2-6093708c29da.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VjMzM1MzBhLTNiYzUtNDZkNi04MjhiLTkyOTY2MDYyMmY0ZlwvZGU3bWRuci04MjA3MDlkNi1kODcxLTQyNzktYjdkMi02MDkzNzA4YzI5ZGEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.qCytZFDLouKCzlzSSxKMhFV_ZWXw67Zl8RjZcNtKxWA" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+              </div>
+            </div>
     </main>
+
 
 </div>
 
