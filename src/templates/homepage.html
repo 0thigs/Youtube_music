@@ -1,0 +1,48 @@
+{% extends 'base.html'%}
+
+{% block title %}
+Homepage - Youtube Helper
+{% endblock%}
+
+<!-- CONTENT -->
+
+{% block body %}
+
+<div style="padding: 0 20px;">
+
+    <div style="margin: 30px 10px;">
+        <h1 style="font-size: 60px;">Mixed for you</h1>
+    </div>
+
+    <main style="display: flex; justify-content: center; align-items: center;">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="height: 500px; width: 60%;">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner" style="height: 500px;">
+              <div class="carousel-item active">
+                <img src="https://e1.pxfuel.com/desktop-wallpaper/191/698/desktop-wallpaper-matue-cria-uma-maquina-do-tempo.jpg" style="height: 500px !important;" class="d-block w-100 h-auto" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://i.ytimg.com/vi/d-GgZpCtBXw/maxresdefault.jpg" style="height: 500px !important;" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.2991656:1600801265/matue.jpeg?f=default&$p$f=5cd2e88" style="height: 500px !important;" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </main>
+
+</div>
+
+{% endblock %}
