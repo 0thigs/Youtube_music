@@ -40,6 +40,26 @@ body {
     gap: 20px;
 }
 
+.card {
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.card:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.025);
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    width: 100vw;
+    color: white;
+    background-color: #000000;
+}
+
+
 @media (max-width: 700px) {
     #carouselExampleIndicators {
         width: 100% !important;
@@ -50,6 +70,7 @@ body {
     }
 
     .cards-container {
+        display: flex;
         transform: scale(0.5);
     }
 }
