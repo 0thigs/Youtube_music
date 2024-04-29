@@ -7,6 +7,8 @@ Youtube Music
 
 <!-- CONTENT -->
 
+<!-- {% include 'components/new_playlist.html'%} -->
+
 {% block body %}
 
 <div class="flex flex-col gap-5">
@@ -25,6 +27,7 @@ Youtube Music
     <h1 class="text-[50px]">New Releases</h1>
     <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
       {{ card.card("Manual De Como Amar Errado", "https://akamai.sscdn.co/letras/360x360/albuns/0/2/5/5/01669897416.jpg", "WIU")}}
+      {{ card.card("ZumZumZum", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbMZlKPmh_0by9U7w190eLNAItFkwkuk0T4Vr1-naIzA&s", "Teto")}}
     </div>
   </div>
 
