@@ -5,7 +5,10 @@ body {
     font-weight: 900;
     font-style: normal;
     color: white;
-    background-color: rgb(26, 26, 26);
+    background-image: url('../static/assets/bg.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: black;
 }
 
   .cards-container {
@@ -15,13 +18,7 @@ body {
 }
 
 @media (max-width: 700px) {
-
-    .img-responsiva {
-        height: 200px !important;
-    }
-
-    .cards-container {
-        display: flex;
-        transform: scale(0.5);
+    body {
+        background-image: url('../static/assets/bg-mobile.png');
     }
 }
