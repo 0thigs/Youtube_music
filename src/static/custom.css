@@ -5,65 +5,16 @@ body {
     font-weight: 900;
     font-style: normal;
     color: white;
-    background-image: linear-gradient(to bottom, #4f0088, #000000);
-    background: linear-gradient(
-    to bottom right,  
-    #020202, #0f2934);
-    background-repeat: no-repeat;
-    background-size: 1000% 1000%;
-    animation: gradient 240s ease infinite;
+    background-color: rgb(26, 26, 26);
 }
 
-@keyframes gradient { 
-    0%{background-position:0% 0%}
-    50%{background-position:100% 100%}
-    100%{background-position:0% 0%}
-  }
-
-.button-search {
-    border: none;
-    background: none;
-    transition: all 0.5s;
-}
-
-.button-search:hover {
-    transform: scale(1.1);
-}
-
-.img-responsiva {
-    height: 500px !important;
-}
-
-.cards-container {
+  .cards-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
 }
 
-.card {
-    cursor: pointer;
-    transition: all .5s;
-}
-
-.card:hover {
-    background-color: white;
-    color: black;
-    transform: scale(1.025);
-}
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f8f9fa;
-    width: 100vw;
-    color: white;
-    background-color: #000000;
-}
-
-
 @media (max-width: 700px) {
-    #carouselExampleIndicators {
-        width: 100% !important;
-    }
 
     .img-responsiva {
         height: 200px !important;

@@ -1,0 +1,11 @@
+{% macro card(title, url, description)%}
+
+<div class="cursor-pointer transition duration-300 w-[10rem] p-1 text-white hover:bg-black hover:shadow-lg rounded-lg">
+    <img src="{{url}}" class="rounded-lg">
+    <div class="">
+        <h4 class="text-lg">{{title}}</h4>
+        <p class="text-sm font-bold text-white-700">{{description}}</p>
+    </div>
+</div>
+
+{% endmacro %}

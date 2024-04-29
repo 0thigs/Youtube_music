@@ -1,108 +1,16 @@
 {% extends 'base.html'%}
+{% import 'components/card.html' as card%}
 
 {% block title %}
-Homepage - Youtube Helper
+Youtube Music
 {% endblock%}
 
 <!-- CONTENT -->
 
 {% block body %}
 
-<div style="padding: 0 20px;">
-    
-    <main style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 100px;">
-          <div class="musics-container" style="display: flex; flex-direction: column; justify-content: center; align-items: start;">
-            <div style="margin: 30px 10px;">
-                <h1 style="font-size: 60px;">Recommended albuns for you</h1>
-            </div>
-            <div class="cards-container">
-                <div class="card" style="width: 18rem; background: none; color: white;">
-                    <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/6/6e/Donda_With_Child.jpg/220px-Donda_With_Child.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h4>Donda</h4>
-                        <p class="card-text">Kanye West, ty dolla sign</p>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem; background: none; color: white;">
-                    <img src="https://akamai.sscdn.co/uploadfile/letras/albuns/c/3/1/5/2154001710417752.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h4>Desordem</h4>
-                        <p class="card-text">Lilgiela33</p>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem; background: none; color: white;">
-                    <img src="https://upload.wikimedia.org/wikipedia/pt/2/29/Capa_do_%C3%A1lbum_M%C3%A1quina_do_Tempo.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h4>Maquina do tempo</h4>
-                        <p class="card-text">Matue</p>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem; background: none; color: white;">
-                    <img src="https://upload.wikimedia.org/wikipedia/pt/4/48/Utopia_-_Travis_Scott.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h4>Utopia</h4>
-                        <p class="card-text">Travis Scott</p>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem; background: none; color: white;">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/e/e6/Hoodie_SZN_A_Boogie.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h4>Hoodie SZN</h4>
-                        <p class="card-text">A boogie wit da hoodie</p>
-                    </div>
-                </div>
-              </div>
-            </div>
-
-
-            <main style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 100px;">
-              <div class="musics-container" style="display: flex; flex-direction: column; justify-content: center; align-items: start;">
-                <div style="margin: 30px 10px;">
-                    <h1 style="font-size: 60px;">Recommended musics for you</h1>
-                </div>
-                <div class="cards-container">
-                    <div class="card" style="width: 18rem; background: none; color: white;">
-                        <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/6/6e/Donda_With_Child.jpg/220px-Donda_With_Child.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h4>Donda</h4>
-                            <p class="card-text">Kanye West, ty dolla sign</p>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem; background: none; color: white;">
-                        <img src="https://akamai.sscdn.co/uploadfile/letras/albuns/c/3/1/5/2154001710417752.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h4>Desordem</h4>
-                            <p class="card-text">Lilgiela33</p>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem; background: none; color: white;">
-                        <img src="https://upload.wikimedia.org/wikipedia/pt/2/29/Capa_do_%C3%A1lbum_M%C3%A1quina_do_Tempo.jpeg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h4>Maquina do tempo</h4>
-                            <p class="card-text">Matue</p>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem; background: none; color: white;">
-                        <img src="https://upload.wikimedia.org/wikipedia/pt/4/48/Utopia_-_Travis_Scott.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h4>Utopia</h4>
-                            <p class="card-text">Travis Scott</p>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem; background: none; color: white;">
-                        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ec33530a-3bc5-46d6-828b-929660622f4f/de7mdnr-820709d6-d871-4279-b7d2-6093708c29da.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VjMzM1MzBhLTNiYzUtNDZkNi04MjhiLTkyOTY2MDYyMmY0ZlwvZGU3bWRuci04MjA3MDlkNi1kODcxLTQyNzktYjdkMi02MDkzNzA4YzI5ZGEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.qCytZFDLouKCzlzSSxKMhFV_ZWXw67Zl8RjZcNtKxWA" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-    </main>
-
-    <footer>
-      <p>&copy; 2024 Thigs. Todos os direitos reservados.</p>  
-    </footer>
-
+<div class="">
+  <!-- {{ card.card("Desordem", "https://akamai.sscdn.co/letras/360x360/albuns/c/3/1/5/2154001710417752.jpg", "Lilgiela33")}} -->
 </div>
 
 {% endblock %}
