@@ -1,3 +1,4 @@
+
 <div class="fixed h-full bg-black w-[240px] z-50 p-[20px] border-r border-zinc-700 flex flex-col gap-12">
     <div class="flex w-[100%] justify-between">
         <button>
@@ -11,39 +12,43 @@
     <div>
         <button class="flex justify-start items-center gap-4 pl-5 py-2 w-full hover:bg-[#1D1D1D] rounded">
             <img src="https://www.unhcr.org/spotlight/wp-content/uploads/sites/55/2021/05/Icon-test-House-white.png" width="15px" height="auto">
-            <p class="text-lg font-normal">Home</p>
+            <p class="text-lg font-normal mb-0">Home</p>
         </button>
 
         <button class="flex justify-start items-center gap-4 pl-5 py-2 w-full hover:bg-[#1D1D1D] rounded">
             <img src="https://www.clker.com/cliparts/v/C/2/9/I/6/search-icon-white-md.png" width="15px" height="auto">
-            <p class="text-lg font-normal">Explore</p>
+            <p class="text-lg font-normal mb-0">Explore</p>
         </button>
 
         <button class="flex justify-start items-center gap-4 pl-4 py-2 w-full hover:bg-[#1D1D1D] rounded">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#fff" class="w-5 h-5 ">
                 <path fill-rule="evenodd" d="M9.674 2.075a.75.75 0 0 1 .652 0l7.25 3.5A.75.75 0 0 1 17 6.957V16.5h.25a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5H3V6.957a.75.75 0 0 1-.576-1.382l7.25-3.5ZM11 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM7.5 9.75a.75.75 0 0 0-1.5 0v5.5a.75.75 0 0 0 1.5 0v-5.5Zm3.25 0a.75.75 0 0 0-1.5 0v5.5a.75.75 0 0 0 1.5 0v-5.5Zm3.25 0a.75.75 0 0 0-1.5 0v5.5a.75.75 0 0 0 1.5 0v-5.5Z" clip-rule="evenodd" />
               </svg>
-            <p class="text-lg font-normal">Library</p>
+            <p class="text-lg font-normal mb-0">Library</p>
         </button>
 
         <button class="flex justify-start items-center gap-4 pl-3 py-2 w-full hover:bg-[#1D1D1D] rounded">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                 <path fill-rule="evenodd" d="M19.952 1.651a.75.75 0 0 1 .298.599V16.303a3 3 0 0 1-2.176 2.884l-1.32.377a2.553 2.553 0 1 1-1.403-4.909l2.311-.66a1.5 1.5 0 0 0 1.088-1.442V6.994l-9 2.572v9.737a3 3 0 0 1-2.176 2.884l-1.32.377a2.553 2.553 0 1 1-1.402-4.909l2.31-.66a1.5 1.5 0 0 0 1.088-1.442V5.25a.75.75 0 0 1 .544-.721l10.5-3a.75.75 0 0 1 .658.122Z" clip-rule="evenodd" />
             </svg>
-            <p class="text-lg font-normal">Upgrade</p>
+            <p class="text-lg font-normal mb-0">Upgrade</p>
         </button>
     </div>
 
     <hr>
 
     <div>
-        <button class="flex justify-start items-center gap-3 pl-5 py-2 w-full hover:bg-[#1D1D1D] rounded-full">
+        <button class="flex justify-start items-center gap-3 pl-5 py-2 w-full hover:bg-[#1D1D1D] rounded-full" onclick="TogglePopup()">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                 <path fill-rule="evenodd" d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
             </svg>
-            <p class="font-bold">
-                New playlist 
+            <p class="font-bold mb-0 ">
+                New music 
             </p>              
         </button>
     </div>
 </div>
+
+<script src="{{url_for('static', filename='togglePopup.js')}}"></script>
+
+{% include 'components/new_music.html'%}
