@@ -1,6 +1,6 @@
 <form class="fixed top-[25%] left-[30%] w-[640px] bg-[#212121] border-[0.5px] p-[30px] border-zinc-700">
     <header class="flex justify-start items-center pb-[30px]">
-        <h3>New music</h3>
+        <h2 class="text-xl">New music</h2>
     </header>
 
     <div class="flex flex-col gap-5 pb-[30px]">
@@ -10,7 +10,9 @@
     </div>
 
     <footer class="flex justify-end items-center gap-3">
-        <button class="font-normal text-md hover:opacity-50 transition duration-50">Cancel</button>
-        <button class="font-semibold text-md px-3 py-2 rounded-full bg-white text-black hover:opacity-50 transition duration-50" type="submit">Submit</button>
+        <button type="button" class="font-normal text-md hover:opacity-50 transition duration-50" onclick="TogglePopup()">Cancel</button>
+        <button type="button" class="font-semibold text-md px-3 py-2 rounded-full bg-white text-black hover:opacity-50 transition duration-50" type="submit">Submit</button>
     </footer>
 </form>
+
+<script src="{{url_for('static', filename='scripts/togglePopup.js')}}"></script>
