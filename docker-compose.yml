@@ -1,0 +1,43 @@
+version: '2'
+
+services:
+  database:
+    image: 'bitnami/mysql:latest'
+    container_name: 'youtube'
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_USER=thigs
+      - MYSQL_DATABASE=youtube
+    networks:
+      - app-tier
+    volumes:
+      - mysql_data:/bitnami/mysql/data
+    ports:
+      - 3307:3306
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      start_period: 5s
+      retries: 3
+
+  app:
+    build: .
+    container_name: 'app-youtube'
+    networks:
+      - app-tier
+    volumes:
+      - .:/app
+    ports:
+      - 5000:5000
+    depends_on:
+      database:
+        condition: service_healthy
+
+networks:
+  app-tier:
+    driver: bridge
+volumes:
+  mysql_data:
+    driver: local
