@@ -10,6 +10,7 @@ config = {
 }
 
 database = mysql.connector.connect(**config)
+cursor = database.cursor()
 
 template_dir = "./src/templates"
 static_dir = "./src/static"
