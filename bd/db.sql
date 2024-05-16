@@ -1,5 +1,5 @@
--- Active: 1715737537685@@127.0.0.1@3307@youtube
-create database youtube
+-- Active: 1715783627262@@localhost@3307
+use youtube
 
 create table user(
     id int primary key auto_increment,
@@ -7,5 +7,16 @@ create table user(
     email varchar(50) not null,
     senha varchar(50) not null
 )
+
+create table post (
+    id int primary key auto_increment,
+    titulo varchar(50) not null,
+    musicurl varchar(250) not null,
+    image varchar(50) not null
+)
+
+drop table post
+
+drop table user
 
 SHOW TABLES
