@@ -23,7 +23,7 @@ services:
       retries: 3
 
   app:
-    build: .
+    image: 'thigszin/youtube-music:1.0'
     container_name: 'app-youtube'
     networks:
       - app-tier
