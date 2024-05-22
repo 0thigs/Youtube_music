@@ -1,5 +1,5 @@
 {% extends 'base.html'%}
-{% import 'components/card.html' as card%}
+{% from 'components/card.html' import card %}
 
 {% block title %}
 Youtube Music
@@ -13,27 +13,15 @@ Youtube Music
   <div class="mt-10 flex flex-col justify-start items-start gap-3">
     <h1 class="text-[50px]">Your Library</h1>
     <div class="grid grid-cols-2 gap-3 sm:grid-cols-2 xl:grid-cols-5">
-      {{ card.card("Donda", "https://upload.wikimedia.org/wikipedia/pt/thumb/6/6e/Donda_With_Child.jpg/220px-Donda_With_Child.jpg", "Kanye West, Ty Dolla Sign")}}
-      {{ card.card("Utopia", "https://m.media-amazon.com/images/I/51nMgSxPQeL._UF1000,1000_QL80_DpWeblab_.jpg", "Travis Scott")}}
-      {{ card.card("Desordem", "https://akamai.sscdn.co/letras/360x360/albuns/c/3/1/5/2154001710417752.jpg", "Lilgiela33")}}
-      {{ card.card("Maquina do Tempo", "https://upload.wikimedia.org/wikipedia/pt/2/29/Capa_do_%C3%A1lbum_M%C3%A1quina_do_Tempo.jpeg", "Matuê")}}
-      {{ card.card("Hoodie SZN", "https://upload.wikimedia.org/wikipedia/en/e/e6/Hoodie_SZN_A_Boogie.jpg", "A Boogie Wit da Hoodie")}}
-    </div>
-  </div>
-  
-  <div class="mt-10 flex flex-col justify-start items-start gap-3">
-    <h1 class="text-[50px]">New Releases</h1>
-    <div class="grid grid-cols-2 gap-3 sm:grid-cols-2 xl:grid-cols-5">
-      {{ card.card("Manual De Como Amar Errado", "https://akamai.sscdn.co/letras/360x360/albuns/0/2/5/5/01669897416.jpg", "WIU")}}
-      {{ card.card("ZumZumZum", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbMZlKPmh_0by9U7w190eLNAItFkwkuk0T4Vr1-naIzA&s", "Teto")}}
-    </div>
-  </div>
-
-  <div class="mt-10 flex flex-col justify-start items-start gap-3">
-    <h1 class="text-[50px]">Hip Hop</h1>
-    <div class="grid grid-cols-2 gap-3 sm:grid-cols-2 xl:grid-cols-5">
-      {{ card.card("Quem?", "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/5f/23/d9/5f23d9f8-bd3e-8cd7-0813-a2f4c4ca0781/1963627230214_cover.jpg/800x800cc.jpg", "4KGuto")}}
-      {{ card.card("Stay With Me", "https://cdns-images.dzcdn.net/images/cover/d45a826fad87feb2a7f418b4689d5eaa/500x500.jpg", "1nonly")}}
+      {% for music in musics %}
+       {{
+        card(
+        title=music['titulo'], 
+        description=music['description'], 
+        music_url=music['musicurl'], 
+        img_url=music['musicimage']) 
+      }}
+      {% endfor %}
     </div>
   </div>
 </div>
